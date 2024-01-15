@@ -20,7 +20,7 @@
   --bg-color: #303847;
   --second-bg-color: #282e3ad2;
   --text-color: #fff;
-  --main-color: rgb(96, 255, 234);
+  --main-color: rgb(255, 136, 176);
   --background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('background/background2.jpeg');
 
 }
@@ -176,6 +176,7 @@ span{
   width: 30vw;
   border-radius: 10rem;
   box-shadow: 0 0 1rem var(--main-color);
+  margin-right: 3rem;
 }
 
 .heading {
@@ -338,7 +339,6 @@ span{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
 .contact form .input-box input,
@@ -350,6 +350,7 @@ span{
   background: var(--second-bg-color);
   border-radius: .8rem;
   margin: .7rem 0;
+  border: 1px solid var(--main-color);
 }
 
 .contact form .input-box input{
@@ -364,6 +365,8 @@ span{
   margin-top: 2rem;
   cursor: pointer;
 }
+
+/* footer */
 
 .footer{
   display: flex;
