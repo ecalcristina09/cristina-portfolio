@@ -41,3 +41,40 @@ window.onscroll = () => {
 
 };
 
+const form = document.querySelector("form");
+const fullName = document.getElementById("name");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const subject = document.getElementById("subject");
+const mess = document.getElementById("message");
+
+function sendEmail(){
+    const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Phone Number: ${phone.value}<br> Message: ${message.value}`;
+
+
+  Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "ecalcristina09@gmail.com",
+    Password : "407852A5DDEF3BA8A029A3E8349735068D1F",
+    To : 'ecalcristina09@gmail.com',
+    From : "ecalcristina09@gmail.com",
+    Subject : subject.value,
+    Body : bodyMessage
+}).then(
+  message => {
+    if (message == "OK") {
+      Swal.fire({
+        title: "Success!",
+        text: "Message sent successfully!",
+        icon: "success"
+      });
+    }
+   }
+  );
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendEmail();
+}
+);
